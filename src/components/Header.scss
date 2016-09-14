@@ -1,0 +1,48 @@
+@import '../index';
+
+.Header {
+  color: #fff;
+  background-color: $base-color;
+}
+
+.Header-credits {
+  & > * {
+    margin-right: 1rem;
+    &:first-child {
+      margin-right: 0.1rem;
+    }
+  }
+
+  img {
+    border-radius: 5px;
+    max-height: 6rem;
+  }
+
+  h2 {
+    margin: 0 0 1rem 0;
+  }
+}
+
+.Header-credits-panel {
+  a {
+    &:last-child {
+      margin-left: 1rem;
+    }
+  }
+  svg {
+    width: 2rem;
+    &:hover {
+      fill: $accent-color;
+    }
+  }
+}
+
+.Header-logout {
+  svg {
+    height: 3.5rem; width: 3.5rem;
+    transition: all .6s;
+    &:hover {
+      fill: $accent-color;
+    }
+  }
+}

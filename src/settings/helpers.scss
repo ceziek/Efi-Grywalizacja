@@ -1,0 +1,31 @@
+.wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.icon {
+  height: 100px;
+  width: 100px;
+}
+
+.bold {
+  font-weight: bold;
+}

@@ -1,0 +1,92 @@
+@import "../index";
+
+.Badge {
+  padding-bottom: 15%;
+  flex-basis: 15%;
+  margin: 0 0.6rem 1.25rem 0.6rem;
+
+  position: relative;
+  flex-flow: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all .6s;
+
+
+
+  & > * {
+    position: absolute;
+    top: 0; bottom: 0; right: 0;
+    width: 100%;
+  }
+
+  &:last-child {
+    margin-right: auto;
+  }
+
+  &:hover {
+    box-shadow: 0 0 1.5rem 0.1rem #7e7f7f;
+  }
+}
+
+.Badge-content {
+  flex-flow: column;
+  left: 0;
+  z-index: 100;
+
+  p {
+    margin: 1rem;
+
+    &:first-child {
+      align-self: flex-start;
+      font-size: 2.2rem;
+      font-weight: 100;
+    }
+
+    &:last-child {
+      font-size: 1rem;
+    }
+
+    &.active {
+      font-weight: bold;
+    }
+
+    img {
+      width: 3rem;
+    }
+  }
+}
+
+.Badge-loader {
+  background-color: $base-color;
+  width: 70%;
+  transition: all 2s;
+}
+
+.Badge-placeholder {
+  left: 0;
+  background: url("../assets/img/badge-placeholder.png") no-repeat center #fff;
+  background-size: 40%;
+}
+
+.Badge-image {
+  left: 0;
+
+  img {
+    width: 100%;
+  }
+}
+
+.Badge-star {
+  padding: 0.5rem;
+  width: auto;
+  &.active {
+    svg {
+      fill: #fff;
+    }
+  }
+  svg {
+    fill: $main-color;
+    width: 2rem;
+    height: 2rem;
+  }
+}

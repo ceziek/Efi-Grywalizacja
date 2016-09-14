@@ -1,0 +1,43 @@
+@import "../index";
+
+.Grywalizacja {
+  width: 100%;
+  margin-bottom: 2rem;
+
+}
+
+.Grywalizacja-header {
+  div {
+    .button-default {
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.Grywalizacja-ranking {
+  & > * {
+    flex-basis: 24%;
+    text-align: left;
+    h3 {
+      margin: 0;
+    }
+    span {
+      font-size: 1.5rem;
+    }
+  }
+  &.flex {
+    justify-content: flex-start;
+  }
+}
+
+.Achievements,
+.Badges {
+  width: 100%;
+  &.flex {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+}

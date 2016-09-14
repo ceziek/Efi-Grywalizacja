@@ -1,0 +1,19 @@
+.Menu {
+  & > * {
+    padding: 1rem 1.5rem;
+    display: inline-block;
+  }
+}
+
+.Menu-item {
+  transition: all .6s;
+  p {
+    margin: 0.5rem 0 0 0;
+  }
+  svg {
+    width: 4rem;  height: 4rem;
+  }
+  &:hover {
+    background-color: #000;
+  }
+}
