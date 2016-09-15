@@ -1,11 +1,11 @@
 .Menu {
   & > * {
     padding: 1rem 1.5rem;
-    display: inline-block;
   }
 }
 
 .Menu-item {
+
   transition: all .6s;
   p {
     margin: 0.5rem 0 0 0;
@@ -15,5 +15,17 @@
   }
   &:hover {
     background-color: #000;
+  }
+}
+
+@media screen and (max-width:479px) {
+  .Menu {
+    &.flex {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+  .Menu-item {
+    flex-basis: 35%;
   }
 }

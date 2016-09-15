@@ -25,7 +25,7 @@ class Menu extends Component {
 
     render() {
         return (
-            <div className="Menu">
+            <div className="Menu flex">
                 {this.data.map((data, i) => {
                     return (
                         <MenuItem data={data} key={i}/>

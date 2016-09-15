@@ -10,17 +10,10 @@
   border-radius: 0.5rem;
   overflow: hidden;
   transition: all .6s;
-
-
-
   & > * {
     position: absolute;
     top: 0; bottom: 0; right: 0;
     width: 100%;
-  }
-
-  &:last-child {
-    margin-right: auto;
   }
 
   &:hover {
@@ -70,7 +63,6 @@
 
 .Badge-image {
   left: 0;
-
   img {
     width: 100%;
   }
@@ -88,5 +80,21 @@
     fill: $main-color;
     width: 2rem;
     height: 2rem;
+  }
+}
+@media screen and (max-width:479px) {
+  .Badge {
+    padding-bottom: 80%;
+    flex-basis: 80%;
+  }
+  .Badge-content {
+    p {
+      white-space: nowrap;
+      &:first-child {
+      }
+      &:last-child {
+        font-size: 1.3rem;
+      }
+    }
   }
 }

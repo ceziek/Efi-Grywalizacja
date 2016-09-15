@@ -1,14 +1,13 @@
 @import "../index";
 
 .Grywalizacja {
-  width: 100%;
   margin-bottom: 2rem;
 
 }
 
 .Grywalizacja-header {
   div {
-    .button-default {
+   .button-default {
       &:last-child {
         margin-left: 0;
       }
@@ -34,10 +33,34 @@
 
 .Achievements,
 .Badges {
-  width: 100%;
   &.flex {
     flex-flow: row wrap;
     justify-content: flex-start;
   }
-
 }
+
+@media screen and (max-width:479px) {
+  .Grywalizacja {
+    padding: 1rem;
+    overflow: hidden;
+  }
+  .Grywalizacja-header {
+    flex-flow: column;
+    div {
+      label {
+        display: block;
+      }
+      .button-default {
+        margin: 1rem 0;
+      }
+    }
+  }
+  .Achievements,
+  .Badges {
+    &.flex {
+      justify-content: space-around;
+    }
+  }
+}
+
+

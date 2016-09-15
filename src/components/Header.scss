@@ -1,5 +1,16 @@
 @import '../index';
 
+//only mobile menu header
+.mobile-menu {
+  display: none;
+  z-index: 101;
+  transition: all .6s;
+  &.active {
+    background-color: transparent;
+  }
+}
+//----------------------
+
 .Header {
   color: #fff;
   background-color: $base-color;
@@ -8,9 +19,6 @@
 .Header-credits {
   & > * {
     margin-right: 1rem;
-    &:first-child {
-      margin-right: 0.1rem;
-    }
   }
 
   img {
@@ -45,4 +53,49 @@
       fill: $accent-color;
     }
   }
+}
+
+@media screen and (max-width:479px) {
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    background-color: $main-color;
+    top: 0; right: 0; left: 0;
+    height: 4rem;
+  }
+  .Header {
+    width: 100vw;
+    position: fixed;
+    top: 4rem; right: 0;
+    max-height: 90vh;
+
+    overflow: hidden;
+    z-index: 101;
+    transition: all .6s ease-out;
+    .wrapper {
+      &.flex {
+        flex-flow: column;
+      }
+    }
+    &.mobile {
+      right: -120%;
+    }
+  }
+  .Header-credits {
+    margin: 1rem 0;
+
+    img {
+      &:first-child {
+        display: none;
+      }
+
+    }
+  }
+  .Header-credits-panel {
+
+  }
+  .Header-logout {
+    margin: 2rem;
+  }
+
 }

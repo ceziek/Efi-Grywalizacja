@@ -5,21 +5,16 @@
   flex-basis: 15%;
   margin: 0 0.6rem 1.25rem 0.6rem;
 
-
   position: relative;
   flex-flow: column;
-  border-radius: 0.5rem;
   overflow: hidden;
-
+  border-radius: 0.5rem;
   transition: all .6s;
-
-
   & > * {
     position: absolute;
     top: 0; bottom: 0; right: 0;
     width: 100%;
   }
-
   &:hover {
     box-shadow: 0 0 1.5rem 0.1rem #7e7f7f;
   }
@@ -29,24 +24,19 @@
   flex-flow: column;
   left: 0;
   z-index: 100;
-
   p {
     margin: 1rem;
-
     &:first-child {
       align-self: flex-start;
       font-size: 2.2rem;
       font-weight: 100;
     }
-
     &:last-child {
       font-size: 1rem;
     }
-
     &.active {
       font-weight: bold;
     }
-
     img {
       width: 3rem;
     }
@@ -56,7 +46,6 @@
 .Achievement-loader {
   background-color: $base-color;
   width: 70%;
-
   transition: all 2s;
 }
 
@@ -68,8 +57,24 @@
 
 .Achievement-image {
   left: 0;
-
   img {
     width: 100%;
+  }
+}
+
+@media screen and (max-width:479px) {
+  .Achievement {
+    padding-bottom: 80%;
+    flex-basis: 80%;
+  }
+  .Achievement-content {
+    p {
+      white-space: nowrap;
+      &:first-child {
+      }
+      &:last-child {
+        font-size: 1.3rem;
+      }
+    }
   }
 }
