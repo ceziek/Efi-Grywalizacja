@@ -64,7 +64,7 @@ class Header extends Component {
     render() {
         return (
             <div>
-                <div className="mobile-menu active right">
+                <div className="mobile-menu right">
                     <button className="button-default" onClick={this.mobileHeader}>MENU</button>
                 </div>
                 <div className="Header mobile">

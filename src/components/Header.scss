@@ -4,9 +4,14 @@
 .mobile-menu {
   display: none;
   transition: all .6s;
+  position: fixed;
+
+  top: 0; right: 0;
+  background-color: transparent;
   z-index: 101;
   &.active {
-    background-color: transparent;
+    background-color: $main-color;
+    width: 100%;
   }
   .button-default {
     opacity: .5;
@@ -68,18 +73,13 @@
 @media screen and (max-width: 1000px) {
   .mobile-menu {
     display: block;
-    position: fixed;
-
-    top: 0; right: 0;
     height: 4rem;
-    background-color: $main-color;
   }
   .Header {
     position: fixed;
     overflow: hidden;
 
-    top: 4rem;
-    right: 0;
+    top: 4rem; right: 0;
     width: 100vw;
     max-height: 90vh;
 
@@ -100,11 +100,9 @@
       &:first-child {
         display: none;
       }
-
     }
   }
   .Header-credits-panel {
-
   }
   .Header-logout {
     margin: 2rem;
