@@ -1,7 +1,7 @@
-@import "../index";
+@import "../settings/variables";
 
 .Achievement {
-  padding-bottom: 15%;
+
   flex-basis: 15%;
   margin: 0 0.6rem 1.25rem 0.6rem;
 
@@ -18,6 +18,12 @@
   &:hover {
     box-shadow: 0 0 1.5rem 0.1rem #7e7f7f;
   }
+  &:after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
 }
 
 .Achievement-content {
@@ -26,6 +32,7 @@
   z-index: 100;
   p {
     margin: 1rem;
+    white-space: nowrap;
     &:first-child {
       align-self: flex-start;
       font-size: 2.2rem;
@@ -62,18 +69,42 @@
   }
 }
 
-@media screen and (max-width:479px) {
+
+@media screen and (max-width:1200px) {
   .Achievement {
-    padding-bottom: 80%;
+    flex-basis: 18%;
+  }
+}
+@media screen and (max-width:1000px) {
+  .Achievement {
+    flex-basis: 22%;
+  }
+}
+@media screen and (max-width:800px) {
+  .Achievement {
+    flex-basis: 29%;
+  }
+}
+@media screen and (max-width:600px) {
+  .Achievement {
+    flex-basis: 43%;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .Achievement {
     flex-basis: 80%;
   }
   .Achievement-content {
     p {
-      white-space: nowrap;
+      white-space: normal;
       &:first-child {
+        font-size: 3rem;
+        margin: 1rem 0 0 1rem;
       }
       &:last-child {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+        margin-top: 0;
       }
     }
   }

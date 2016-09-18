@@ -2,20 +2,30 @@ import React, {Component} from 'react/';
 import doneImg from '../assets/img/done.png'
 import './Achievement.scss';
 
+/**
+ * Achievement Component <Achievement data={object}/>
+ *     @object = {
+ *             title: 'Component Title',
+ *             percent: 0-100,
+ *             image: 'path to component image'
+ *          }
+ */
 class Achievement extends Component {
     render() {
+        //Inline styles
         var loaderStyle = {
             width: (100 - this.props.data.percent) + '%'
         };
-
         var colorStyle = {
             color: '#fff'
         };
-
+        /**
+         * Building component view based on percentage prop.
+         */
         switch (this.props.data.percent) {
-            case '0' :
+            case 0 :
                 return (
-                    <div className="Achievement">
+                    <div className="Achievement" onClick={this.props.onClick}>
                         <div className="Achievement-placeholder"></div>
                         <div className="Achievement-content flex">
                             <p>{this.props.data.percent}%</p>
@@ -23,9 +33,9 @@ class Achievement extends Component {
                         </div>
                     </div>
                 );
-            case '100' :
+            case 100 :
                 return (
-                    <div className="Achievement flex" style={colorStyle}>
+                    <div className="Achievement" style={colorStyle} onClick={this.props.onClick}>
                         <div className="Achievement-image">
                             <img src={this.props.data.image} alt=""/>
                         </div>
@@ -37,7 +47,7 @@ class Achievement extends Component {
                 );
             default :
                 return (
-                    <div className="Achievement flex" style={colorStyle}>
+                    <div className="Achievement" style={colorStyle} onClick={this.props.onClick}>
                         <div className="Achievement-image">
                             <img src={this.props.data.image} alt=""/>
                         </div>
@@ -52,6 +62,5 @@ class Achievement extends Component {
         }
     }
 }
-
 
 export default Achievement;

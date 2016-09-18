@@ -1,7 +1,6 @@
-@import "../index";
+@import "../settings/variables";
 
 .Badge {
-  padding-bottom: 15%;
   flex-basis: 15%;
   margin: 0 0.6rem 1.25rem 0.6rem;
 
@@ -19,6 +18,11 @@
   &:hover {
     box-shadow: 0 0 1.5rem 0.1rem #7e7f7f;
   }
+  &:after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
 }
 
 .Badge-content {
@@ -28,7 +32,7 @@
 
   p {
     margin: 1rem;
-
+    white-space: nowrap;
     &:first-child {
       align-self: flex-start;
       font-size: 2.2rem;
@@ -82,14 +86,32 @@
     height: 2rem;
   }
 }
-@media screen and (max-width:479px) {
+@media screen and (max-width:1200px) {
   .Badge {
-    padding-bottom: 80%;
+    flex-basis: 18%;
+  }
+}
+@media screen and (max-width:1000px) {
+  .Badge {
+    flex-basis: 22%;
+  }
+}
+@media screen and (max-width:800px) {
+  .Badge {
+    flex-basis: 29%;
+  }
+}
+@media screen and (max-width:600px) {
+  .Badge {
+    flex-basis: 43%;
+  }
+}
+@media screen and (max-width:400px) {
+  .Badge {
     flex-basis: 80%;
   }
   .Badge-content {
     p {
-      white-space: nowrap;
       &:first-child {
       }
       &:last-child {

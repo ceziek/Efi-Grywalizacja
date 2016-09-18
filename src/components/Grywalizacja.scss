@@ -1,4 +1,4 @@
-@import "../index";
+@import "../settings/variables";
 
 .Grywalizacja {
   margin-bottom: 2rem;
@@ -39,7 +39,34 @@
   }
 }
 
-@media screen and (max-width:479px) {
+@media screen and (max-width:1200px) {
+
+}
+@media screen and (max-width:1000px) {
+  .Grywalizacja {
+    &.wrapper {
+     margin-top: 2rem;
+    }
+  }
+}
+@media screen and (max-width:800px) {
+  .Grywalizacja-header {
+    flex-flow: column;
+    div {
+      label {
+        display: block;
+      }
+      .button-default {
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+@media screen and (max-width:600px) {
+
+}
+
+@media screen and (max-width:400px) {
   .Grywalizacja {
     padding: 1rem;
     overflow: hidden;
